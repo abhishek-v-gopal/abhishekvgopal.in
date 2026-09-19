@@ -104,7 +104,7 @@ export default function RootLayout({
       lang="en-IN"
       className={`${bricolage.variable} ${newsreader.variable}`}
     >
-      <body>
+      <body suppressHydrationWarning>
         {children}
         <script
           type="application/ld+json"

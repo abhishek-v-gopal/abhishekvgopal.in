@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { testimonials } from "../lib/testimonials";
+import { testimonials } from "@/lib/testimonials";
 import { posts } from "../lib/post";
+import { featuredProjects } from "../lib/projects";
 
 const shell = "mx-auto w-full max-w-[78rem] px-[clamp(1.25rem,5vw,5rem)]";
 const band = "py-[clamp(4.5rem,10vw,9rem)]";
@@ -9,45 +10,6 @@ const band = "py-[clamp(4.5rem,10vw,9rem)]";
 const recentPosts = [...posts]
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   .slice(0, 3);
-
-const work = [
-  {
-    id:   1,
-    name: "Gigwork",
-    year: "2025",
-    note: "A hyperlocal directory that helps people in Kerala find local businesses and services without digging through WhatsApp groups.",
-    tags: ["Next.js", "Node", "MongoDB", "Cloudflare"],
-    href: "https://gigwork.co.in",
-    role: "Founder, built end to end",
-  },
-  {
-    id:2,
-    name: "MoneyVault",
-    year: "2025",
-    note: "A personal finance manager for tracking where money actually goes, built for people who want clarity without a spreadsheet.",
-    tags: ["Next.js", "TypeScript", "SQL"],
-    href: "#",
-    role: "Founder, built end to end",
-  },
-  {
-    id:3,
-    name: "NavPath Academy",
-    year: "2024",
-    note: "Website for a maritime coaching institute in Kottayam, built to turn search traffic into course enquiries.",
-    tags: ["Next.js", "SEO", "Vercel"],
-    href: "#",
-    role: "Client project",
-  },
-  {
-    id:4,
-    name: "K&B Kottarathil Builders",
-    year: "2024",
-    note: "Portfolio and marketing site for a Kerala construction company, built around their completed projects.",
-    tags: ["Next.js", "Design", "Vercel"],
-    href: "#",
-    role: "Client project",
-  },
-];
 
 const practice = [
   {
@@ -65,9 +27,9 @@ const practice = [
 ];
 
 const elsewhere = [
-  { label: "GitHub", href: "https://github.com/abhishekvgopal" },
+  { label: "GitHub", href: "https://github.com/abhishek-v-gopal" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/abhishekvgopal" },
-  { label: "X", href: "https://x.com/abhishekvgopal" },
+  { label: "X", href: "https://x.com/abhishek_vgopal" },
 ];
 
 export default function Home() {
@@ -187,18 +149,26 @@ export default function Home() {
 
         {/* work */}
         <section id="work" className={`${shell} ${band} border-t border-line`}>
-          <div className="mb-[clamp(2.5rem,6vw,4rem)] grid max-w-[62ch] gap-3.5">
-            <h2 className="text-[clamp(1.9rem,4.2vw,3rem)] font-semibold">
-              Things I have shipped
-            </h2>
-            <p className="max-w-[52ch] text-stone">
-              Two products of my own and client work for businesses in Kerala.
-              Every one of them is live and used by real people.
-            </p>
+          <div className="mb-[clamp(2.5rem,6vw,4rem)] flex flex-wrap items-end justify-between gap-4">
+            <div className="grid max-w-[62ch] gap-3.5">
+              <h2 className="text-[clamp(1.9rem,4.2vw,3rem)] font-semibold">
+                Things I have shipped
+              </h2>
+              <p className="max-w-[52ch] text-stone">
+                A mix of my own products and client work across Kerala. Every
+                one of them is live and used by real people.
+              </p>
+            </div>
+            <Link
+              href="/work"
+              className="whitespace-nowrap text-[0.95rem] text-ink-soft no-underline hover:text-brass"
+            >
+              See all work
+            </Link>
           </div>
 
           <div className="grid">
-            {work.map((item, i) => (
+            {featuredProjects.map((item, i) => (
               <a
                 key={item.name}
                 href={item.href}
@@ -209,7 +179,7 @@ export default function Home() {
                     : undefined
                 }
                 className={`group grid gap-3.5 border-t border-line py-[clamp(1.75rem,4vw,2.5rem)] no-underline transition-colors hover:bg-paper-warm sm:grid-cols-[15rem_1fr_auto] sm:items-start sm:gap-8 ${
-                  i === work.length - 1 ? "border-b" : ""
+                  i === featuredProjects.length - 1 ? "border-b" : ""
                 }`}
               >
                 <div>
@@ -366,10 +336,10 @@ export default function Home() {
             </div>
 
             <a
-              href="mailto:hello@abhishekvgopal.in"
+              href="mailto:mail@abhishekvgopal.in"
               className="inline-block break-words border-b-2 border-white/20 pb-1 font-display text-[clamp(1.6rem,6vw,4rem)] font-semibold tracking-[-0.035em] no-underline transition-colors hover:border-brass-light hover:text-brass-light"
             >
-              hello@abhishekvgopal.in
+              mail@abhishekvgopal.in
             </a>
 
             <ul className="mt-[clamp(2.5rem,6vw,4rem)] flex list-none flex-wrap gap-6 p-0 text-[0.95rem]">
