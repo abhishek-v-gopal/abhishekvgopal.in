@@ -11,22 +11,22 @@ export const testimonials: Testimonial[] = [
   {
     id: 1,
     quote:
-      "Add a short quote from your NavPath Academy contact here — what problem you solved for them and how it went.",
-    name: "Client name",
-    role: "NavPath Academy",
+      "Its a great pleasure to work with you guys and have a great time with your service and community throughout the journey of my online business,with your support and dedication towards the project and timing of the completion Thank you so much to the whole team",
+    name: "Anandh",
+    role: "Founder, Alleppeytours",
   },
   {
     id: 2,
     quote:
-      "Add a quote from K&B Kottarathil Builders here — specific is better than generic praise.",
-    name: "Client name",
-    role: "K&B Kottarathil Builders",
+      "We, the Association for the Intellectually Challenged ( AID ) Kerala work  in connection with the All kerala special school kalolsavam ie, Chilamboli 2026. The teams work is well appreciated... and the team members were working with friedl approach...and we got correct result in each competition...",
+    name: "Sr. Flower Jose",
+    role: "Vice Chairperson AID",
   },
   {
     id: 3,
     quote:
-      "Add a quote from a Devmorphix workshop host or college coordinator here.",
-    name: "Contact name",
-    role: "Devmorphix workshop host",
+      "I've often seen people who believes that the toughest way to do something is usually the best way. Abhishek is one among them. Whatever he do, he'll put his mind and body into it.I'll surely recommend him for any sort of technical, mentoring and management activities.",
+    name: "Nikhil T Das",
+    role: "Senior mentor, STEM Educator, and Entrepreneur",
   },
 ];
