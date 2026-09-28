@@ -81,7 +81,7 @@ export default async function WritingPost({
           {post.title}
         </h1>
 
-        <div className="max-w-[62ch] space-y-5 text-[1.1rem] leading-[1.7]">
+        <div className="max-w-[90ch] space-y-5 text-[1.1rem] leading-[1.7]">
           {post.body.map((para, i) => (
             <p key={i}>{para}</p>
           ))}
