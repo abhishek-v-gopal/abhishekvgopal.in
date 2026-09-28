@@ -63,7 +63,7 @@ export default function WritingIndex() {
                 <h2 className="text-[1.4rem] font-semibold transition-colors group-hover:text-brass">
                   {post.title}
                 </h2>
-                <p className="mt-2 max-w-[60ch] text-ink-soft">
+                <p className="mt-2 max-w-[90ch] text-ink-soft">
                   {post.excerpt}
                 </p>
               </div>
