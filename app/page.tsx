@@ -119,9 +119,9 @@ export default function Home() {
                 >
                   Start a project
                 </a>
-                {/* Add your PDF at /public/resume.pdf */}
+                {/* Add your PDF at /public/Abhishek_V_Gopal_Resume.pdf */}
                 <a
-                  href="/resume.pdf"
+                  href="/Abhishek_V_Gopal_Resume.pdf"
                   download
                   className="border border-line px-6 py-3 font-display text-[0.95rem] font-semibold text-ink-soft no-underline transition-colors hover:border-brass hover:text-brass"
                 >
@@ -163,7 +163,7 @@ export default function Home() {
               href="/work"
               className="whitespace-nowrap text-[0.95rem] text-ink-soft no-underline hover:text-brass"
             >
-              See all work
+              See more works
             </Link>
           </div>
 
